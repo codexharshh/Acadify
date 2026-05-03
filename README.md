@@ -223,16 +223,19 @@ https://your-firebase-link.web.app
 
 # Technical Details
 
-Component Technology
-Framework Flutter (Dart) with Material 3
-State Management Provider
-Backend Firebase Auth, Firestore, Storage
-AI API Groq (llama-3.1-8b-instant, gemma2-9b-it)
-Charts fl_chart
-Media Uploads Cloudinary
-File Picking file_picker
-Sharing share_plus
-Notifications Browser API (dart:js_interop)
+## Technical Details
+
+| Component | Technology |
+|----------|-----------|
+| Framework | Flutter (Dart) with Material 3 |
+| State Management | Provider |
+| Backend | Firebase Auth, Firestore, Storage |
+| AI API | Groq (llama-3.1-8b-instant, gemma2-9b-it) |
+| Charts | fl_chart |
+| Media Uploads | Cloudinary |
+| File Picking | file_picker |
+| Sharing | share_plus |
+| Notifications | Browser API (dart:js_interop) |
 
 ---
 
