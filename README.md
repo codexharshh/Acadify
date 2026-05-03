@@ -259,7 +259,7 @@ LinkedIn:
 https://www.linkedin.com/in/codexharsh/
 
 GitHub:  
-https://github.com/codewithharsh08
+https://www.linkedin.com/in/codexharshh/
 
 Email:  
 harsh983720@gmail.com
