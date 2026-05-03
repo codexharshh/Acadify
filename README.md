@@ -267,14 +267,20 @@ harsh983720@gmail.com
 
 ---
 
-License
+## License
 
-MIT License
+Licensed under the Apache License 2.0
 
-Copyright (c) 2026 Acadify
+```text
+Copyright 2026 Harsh
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+http://www.apache.org/licenses/LICENSE-2.0
 
-<p align="center"> Made with late-night debugging and chai. </p> ```
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND.
+
+<p align="center"> Made by Harsh </p> ```
