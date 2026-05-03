@@ -85,19 +85,19 @@ Acadify was built to solve exactly these problems. One app that feels like it wa
 
 There are plenty of study apps out there, but most do one thing well and ignore the rest. We wanted to connect all the dots in a way that felt natural:
 
-• **AI that understands education, not just chat**  
-We fine-tuned our prompts so the Groq models return actual study content – not generic summaries. The test generator balances difficulty, the planner thinks about prior knowledge before moving forward, and the YouTube extractor gives you revision-ready notes, not a transcript.
+**AI that understands education, not just chat:**  
+We fine‑tuned our prompts so the Groq models return actual study content – not generic summaries. The test generator balances difficulty, the planner thinks about prior knowledge before moving forward, and the YouTube extractor gives you revision‑ready notes, not a transcript.
 
-• **One codebase, truly everywhere**  
+**One codebase, truly everywhere:**  
 Flutter let us ship on Android, iOS, and web without duplicating work. Whether you’re on your phone or laptop, the experience is the same.
 
-• **Real-time everything**  
-Firebase Firestore means your notes, tasks, and study hours update instantly across all your devices. You’ll never lose data even if you close the app mid-session.
+**Real‑time everything:**  
+Firebase Firestore means your notes, tasks, and study hours update instantly across all your devices. You’ll never lose data even if you close the app mid‑session.
 
-• **Gamification that actually matters**  
+**Gamification that actually matters:**  
 Streaks and leaderboards aren’t just for show – they reflect your real work. The streak only counts when you’ve genuinely studied more than an hour, and the leaderboard uses a weighted score from tasks, notes, and consistency.
 
-• **Clean, distraction-free design**  
+**Clean, distraction‑free design:**  
 We stuck with Material 3 and made sure both light and dark themes are comfortable to read for long study sessions.
 
 ---
