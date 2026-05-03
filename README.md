@@ -185,38 +185,92 @@ Then open the provided hosting URL.
 
 ---
 
-# Screenshots
+## Screenshots
+
 Below are some screenshots of the app in action.
 
-• **Dashboard (home screen)**  
-![Dashboard](assets/screenshots/dashboard.png)
+<!-- Splash -->
+<p align="center">
+  <img src="assets/screenshots/splash.png" width="450"/>
+</p>
+<p align="center"><b>Splash Screen</b></p>
 
-• **YouTube Notes output**  
-![YT Notes](assets/screenshots/yt_notes.png)
+---
 
-• **AI Test Generator**  
-![Test Generator](assets/screenshots/test_generator.png)
+<!-- Auth -->
+<p align="center">
+  <img src="assets/screenshots/login.png" width="400"/>
+  <img src="assets/screenshots/signup.png" width="400"/>
+</p>
+<p align="center">
+  <b>Login</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Create Account</b>
+</p>
 
-• **Study Planner (AI-generated schedule)**  
-![Study Planner](assets/screenshots/study_planner.png)
+---
 
-• **Notes Manager (list view)**  
-![Notes Manager](assets/screenshots/notes_manager.png)
+<!-- Dashboard + YT -->
+<p align="center">
+  <img src="assets/screenshots/dashboard.png" width="400"/>
+  <img src="assets/screenshots/yt_notes.png" width="400"/>
+</p>
+<p align="center">
+  <b>Dashboard</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>YouTube Notes</b>
+</p>
 
-• **Progress Analytics**  
-![Analytics](assets/screenshots/analytics.png)
+---
 
-• **Study Streak page**  
-![Streak](assets/screenshots/streak.png)
+<!-- AI + Planner -->
+<p align="center">
+  <img src="assets/screenshots/test_generator.png" width="400"/>
+  <img src="assets/screenshots/study_planner.png" width="400"/>
+</p>
+<p align="center">
+  <b>AI Test Generator</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Study Planner</b>
+</p>
 
-• **Leaderboard**  
-![Leaderboard](assets/screenshots/leaderboard.png)
+---
+
+<!-- Notes -->
+<p align="center">
+  <img src="assets/screenshots/notes_manager.png" width="500"/>
+</p>
+<p align="center"><b>Notes Manager</b></p>
+
+---
+
+<!-- Progress Analytics (3 images) -->
+<p align="center">
+  <img src="assets/screenshots/analytics1.png" width="260"/>
+  <img src="assets/screenshots/analytics2.png" width="260"/>
+  <img src="assets/screenshots/analytics3.png" width="260"/>
+</p>
+<p align="center"><b>Progress Analytics</b></p>
+
+---
+
+<!-- Study Streak (2 images) -->
+<p align="center">
+  <img src="assets/screenshots/streak1.png" width="400"/>
+  <img src="assets/screenshots/streak2.png" width="400"/>
+</p>
+<p align="center"><b>Study Streak</b></p>
+
+---
+
+<!-- Leaderboard -->
+<p align="center">
+  <img src="assets/screenshots/leaderboard.png" width="500"/>
+</p>
+<p align="center"><b>Leaderboard</b></p>
 
 ---
 
 ## Demo Link
 
-https://your-firebase-link.web.app
+https://acadify-f6372.web.app
 
 ---
 
