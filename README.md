@@ -189,72 +189,39 @@ Then open the provided hosting URL.
 
 Below are some screenshots of the app in action.
 
-<!-- Splash -->
-<p align="center">
-  <img src="assets/splash.png" width="450"/>
-</p>
-<p align="center"><b>Splash Screen</b></p>
+## Screenshots
 
----
+### Splash Screen
+![Splash](assets/splash.png)
 
-<!-- Auth -->
-<p align="center">
-  <img src="assets/login.png" width="400"/>
-  <img src="assets/signup.png" width="400"/>
-</p>
-<p align="center">
-  <b>Login</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <b>Create Account</b>
-</p>
+### Login
+![Login](assets/login.png)
 
----
+### Create Account
+![Signup](assets/signup.png)
 
-<!-- Dashboard + YT -->
-<p align="center">
-  <img src="assets/dashboard.png" width="400"/>
-  <img src="assets/yt_notes.png" width="400"/>
-</p>
-<p align="center">
-  <b>Dashboard</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <b>YouTube Notes</b>
-</p>
+### Dashboard
+![Dashboard](assets/dashboard.png)
 
----
+### YouTube Notes
+![YT Notes](assets/yt_notes.png)
 
-<!-- AI + Planner -->
-<p align="center">
-  <img src="assets/test_generator.png" width="400"/>
-  <img src="assets/study_planner.png" width="400"/>
-</p>
-<p align="center">
-  <b>AI Test Generator</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <b>Study Planner</b>
-</p>
+### AI Test Generator
+![Test Generator](assets/test_generator.png)
 
----
+### Study Planner
+![Study Planner](assets/study_planner.png)
 
-<!-- Notes -->
-<p align="center">
-  <img src="assets/notes_manager.png" width="500"/>
-</p>
-<p align="center"><b>Notes Manager</b></p>
+### Notes Manager
+![Notes Manager](assets/notes_manager.png)
 
----
+### Study Streak
+![Streak](assets/streak1.png)
+![Streak](assets/streak2.png)
 
-<!-- Study Streak -->
-<p align="center">
-  <img src="assets/streak1.png" width="400"/>
-  <img src="assets/streak2.png" width="400"/>
-</p>
-<p align="center"><b>Study Streak</b></p>
+### Leaderboard
+![Leaderboard](assets/leaderboard.png)
 
----
-
-<!-- Leaderboard -->
-<p align="center">
-  <img src="assets/leaderboard.png" width="500"/>
-</p>
-<p align="center"><b>Leaderboard</b></p>
 ---
 
 ## Demo Link
