@@ -248,9 +248,7 @@ https://your-firebase-link.web.app
 - **users/{uid}/studyLogs** – study hours data  
 - **leaderboardGroups** – group metadata  
 
----
-
-## AI Robustness
+**AI Robustness**
 
 We clean AI output using markdown stripping, JSON repair, and fallback parsing so users never see raw errors.
 
