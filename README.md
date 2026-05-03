@@ -189,37 +189,35 @@ Then open the provided hosting URL.
 
 Below are some screenshots of the app in action.
 
-## Screenshots
-
-### Splash Screen
+## Splash Screen
 ![Splash](assets/splash.png)
 
-### Login
+## Login
 ![Login](assets/login.png)
 
-### Create Account
+## Create Account
 ![Signup](assets/signup.png)
 
-### Dashboard
+## Dashboard
 ![Dashboard](assets/dashboard.png)
 
-### YouTube Notes
+## YouTube Notes
 ![YT Notes](assets/yt_notes.png)
 
-### AI Test Generator
+## AI Test Generator
 ![Test Generator](assets/test_generator.png)
 
-### Study Planner
+## Study Planner
 ![Study Planner](assets/study_planner.png)
 
-### Notes Manager
+## Notes Manager
 ![Notes Manager](assets/notes_manager.png)
 
-### Study Streak
+## Study Streak
 ![Streak](assets/streak1.png)
 ![Streak](assets/streak2.png)
 
-### Leaderboard
+## Leaderboard
 ![Leaderboard](assets/leaderboard.png)
 
 ---
