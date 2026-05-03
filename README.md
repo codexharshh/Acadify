@@ -116,7 +116,11 @@ Here’s how the app works under the hood, from user tap to result:
 
 For the timer, we track seconds locally and batch‑save to Firestore every minute to avoid overwhelming writes while still keeping data safe.
 
-*(Visual flowchart can be added as an image: `assets/flowchart.png`)*
+## System Flow
+
+<p align="center">
+  <img src="assets/flowchart.png" width="800">
+</p>
 
 ---
 
