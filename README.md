@@ -284,4 +284,4 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND.
 ```
 
-<p align="center"> Made by Harsh </p> ```
+<p align="center"> Made by Harsh </p> 
