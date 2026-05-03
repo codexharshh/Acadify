@@ -257,7 +257,7 @@ We clean AI output using markdown stripping, JSON repair, and fallback parsing s
 **Harsh**
 
 LinkedIn:  
-https://www.linkedin.com/in/harsh-singh-056b12292/
+https://www.linkedin.com/in/codexharsh/
 
 GitHub:  
 https://github.com/codewithharsh08
