@@ -223,8 +223,6 @@ https://your-firebase-link.web.app
 
 # Technical Details
 
-## Technical Details
-
 | Component | Technology |
 |----------|-----------|
 | Framework | Flutter (Dart) with Material 3 |
