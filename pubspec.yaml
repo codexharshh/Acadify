@@ -1,0 +1,46 @@
+name: acadify2
+description: Acadify - AI-powered student study platform.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Firebase
+  firebase_core: ^2.27.1
+  firebase_auth: ^4.17.9
+  cloud_firestore: ^4.15.9
+  firebase_storage: ^11.6.10
+
+  # HTTP
+  http: ^1.2.0
+
+  # File picker
+  file_picker: ^8.0.0
+
+  # State management
+  provider: ^6.1.1
+
+  # Share
+  share_plus: ^7.2.2
+
+  # Charts
+  fl_chart: ^0.68.0
+
+  # Icons
+  cupertino_icons: ^1.0.6
+
+  # Web notifications
+  js: ^0.6.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
