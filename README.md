@@ -191,7 +191,7 @@ Below are some screenshots of the app in action.
 
 <!-- Splash -->
 <p align="center">
-  <img src="assets/screenshots/splash.png" width="450"/>
+  <img src="assets/splash.png" width="450"/>
 </p>
 <p align="center"><b>Splash Screen</b></p>
 
@@ -199,8 +199,8 @@ Below are some screenshots of the app in action.
 
 <!-- Auth -->
 <p align="center">
-  <img src="assets/screenshots/login.png" width="400"/>
-  <img src="assets/screenshots/signup.png" width="400"/>
+  <img src="assets/login.png" width="400"/>
+  <img src="assets/signup.png" width="400"/>
 </p>
 <p align="center">
   <b>Login</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -211,8 +211,8 @@ Below are some screenshots of the app in action.
 
 <!-- Dashboard + YT -->
 <p align="center">
-  <img src="assets/screenshots/dashboard.png" width="400"/>
-  <img src="assets/screenshots/yt_notes.png" width="400"/>
+  <img src="assets/dashboard.png" width="400"/>
+  <img src="assets/yt_notes.png" width="400"/>
 </p>
 <p align="center">
   <b>Dashboard</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -223,8 +223,8 @@ Below are some screenshots of the app in action.
 
 <!-- AI + Planner -->
 <p align="center">
-  <img src="assets/screenshots/test_generator.png" width="400"/>
-  <img src="assets/screenshots/study_planner.png" width="400"/>
+  <img src="assets/test_generator.png" width="400"/>
+  <img src="assets/study_planner.png" width="400"/>
 </p>
 <p align="center">
   <b>AI Test Generator</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -235,26 +235,16 @@ Below are some screenshots of the app in action.
 
 <!-- Notes -->
 <p align="center">
-  <img src="assets/screenshots/notes_manager.png" width="500"/>
+  <img src="assets/notes_manager.png" width="500"/>
 </p>
 <p align="center"><b>Notes Manager</b></p>
 
 ---
 
-<!-- Progress Analytics (3 images) -->
+<!-- Study Streak -->
 <p align="center">
-  <img src="assets/screenshots/analytics1.png" width="260"/>
-  <img src="assets/screenshots/analytics2.png" width="260"/>
-  <img src="assets/screenshots/analytics3.png" width="260"/>
-</p>
-<p align="center"><b>Progress Analytics</b></p>
-
----
-
-<!-- Study Streak (2 images) -->
-<p align="center">
-  <img src="assets/screenshots/streak1.png" width="400"/>
-  <img src="assets/screenshots/streak2.png" width="400"/>
+  <img src="assets/streak1.png" width="400"/>
+  <img src="assets/streak2.png" width="400"/>
 </p>
 <p align="center"><b>Study Streak</b></p>
 
@@ -262,10 +252,9 @@ Below are some screenshots of the app in action.
 
 <!-- Leaderboard -->
 <p align="center">
-  <img src="assets/screenshots/leaderboard.png" width="500"/>
+  <img src="assets/leaderboard.png" width="500"/>
 </p>
 <p align="center"><b>Leaderboard</b></p>
-
 ---
 
 ## Demo Link
