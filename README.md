@@ -215,13 +215,13 @@ Below are some screenshots of the app in action.
 
 ---
 
-# Demo Link
+## Demo Link
 
 https://your-firebase-link.web.app
 
 ---
 
-# Technical Details
+## Technical Details
 
 | Component | Technology |
 |----------|-----------|
@@ -252,16 +252,16 @@ We clean AI output using markdown stripping, JSON repair, and fallback parsing s
 
 ---
 
-# Developer
+## Developer
 
 **Harsh**
 
-LinkedIn
+• LinkedIn
 
-GitHub
+• GitHub
 https://github.com/codewithharsh08
 
-Email
+• Email
 harsh983720@gmail.com
 
 ---
