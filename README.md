@@ -254,14 +254,14 @@ We clean AI output using markdown stripping, JSON repair, and fallback parsing s
 
 ## Developer
 
- **Harsh**
+**Harsh**
 
-• LinkedIn
+LinkedIn
 
-• GitHub
+GitHub
 https://github.com/codewithharsh08
 
-• Email
+Email
 harsh983720@gmail.com
 
 ---
