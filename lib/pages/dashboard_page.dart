@@ -303,7 +303,10 @@ class _DashboardPageState extends State<DashboardPage>
                 color: Colors.white.withValues(alpha: 0.25),
                 shape: BoxShape.circle,
               ),
-              child: const Icon(Icons.school, color: Colors.white, size: 18),
+              child: Image.asset(
+                'assets/logo.png',
+                height: 18,
+              ),
             ),
             const SizedBox(width: 10),
             const Text('ACADIFY',
