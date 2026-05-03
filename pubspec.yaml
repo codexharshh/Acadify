@@ -1,4 +1,4 @@
-name: acadify2
+name: acadify
 description: Acadify - AI-powered student study platform.
 publish_to: 'none'
 version: 1.0.0+1
@@ -44,3 +44,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/logo.png
