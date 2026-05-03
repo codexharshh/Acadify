@@ -239,16 +239,18 @@ https://your-firebase-link.web.app
 
 ---
 
-# Data in Firestore:
+## Data in Firestore
 
-users – profile, streak tracking, daily goals
-users/{uid}/tasks – planner tasks
-users/{uid}/notes – notes (text, image, PDF)
-users/{uid}/streakHistory – daily streak records
-users/{uid}/studyLogs – study hours data
-leaderboardGroups – group metadata
+- **users** – profile, streak tracking, daily goals  
+- **users/{uid}/tasks** – planner tasks  
+- **users/{uid}/notes** – notes (text, image, PDF)  
+- **users/{uid}/streakHistory** – daily streak records  
+- **users/{uid}/studyLogs** – study hours data  
+- **leaderboardGroups** – group metadata  
 
-AI robustness:
+---
+
+## AI Robustness
 
 We clean AI output using markdown stripping, JSON repair, and fallback parsing so users never see raw errors.
 
