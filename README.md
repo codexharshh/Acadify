@@ -58,7 +58,6 @@ Everything syncs in real time across Android, iOS, and the web. We built this as
 - [Why This Project](#why-this-project)
 - [System Flow](#system-flow)
 - [Directory Structure](#directory-structure)
-- [Quick Start](#quick-start)
 - [Screenshots](#screenshots)
 - [Technical Details](#technical-details)
 - [Developer](#developer)
