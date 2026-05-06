@@ -1,294 +1,378 @@
-<p align="center">
-  
-#  Acadify – AI Powered Student Study Platform
+<div align="center">
+
+```
+ █████╗  ██████╗ █████╗ ██████╗ ██╗███████╗██╗   ██╗
+██╔══██╗██╔════╝██╔══██╗██╔══██╗██║██╔════╝╚██╗ ██╔╝
+███████║██║     ███████║██║  ██║██║█████╗   ╚████╔╝ 
+██╔══██║██║     ██╔══██║██║  ██║██║██╔══╝    ╚██╔╝  
+██║  ██║╚██████╗██║  ██║██████╔╝██║██║        ██║   
+╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝        ╚═╝  
+```
+
+**AI-Powered Student Study Platform**
+
+*Turn any lecture, topic, or deadline into a complete study system — in seconds.*
+
+<br>
+
+[![Flutter](https://img.shields.io/badge/Flutter-3.38+-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
+[![Dart](https://img.shields.io/badge/Dart-3.x-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev)
+[![Firebase](https://img.shields.io/badge/Firebase-Firestore%20%2B%20Auth-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com)
+[![Groq](https://img.shields.io/badge/Groq-LLaMA%20%2B%20Gemma-8B45FF?style=for-the-badge)](https://groq.com)
+[![License](https://img.shields.io/badge/License-Apache%202.0-22C55E?style=for-the-badge)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-acadify--f6372.web.app-F97316?style=for-the-badge)](https://acadify-f6372.web.app)
 
 </div>
 
-<p align="center">
-  <img src="assets/logo.png" width="200">
-</p>
+---
 
-<p align="center">
-A Flutter + Firebase + AI study companion that helps students stay organised, motivated, and exam‑ready.  
-</p>
+## What is Acadify?
+
+Students already spend hours on YouTube, scattered paper notes, and generic to-do apps. Acadify replaces all of that with a single intelligent companion that understands how studying actually works.
+
+Built as a B.Tech final year project, Acadify connects AI-generated content, real-time sync, gamified accountability, and cross-platform delivery into one cohesive system. Every feature feeds the others: the notes you generate become context for your planner, the planner drives your streak, and the streak earns your place on the leaderboard.
+
+> **Live at:** [acadify-f6372.web.app](https://acadify-f6372.web.app)
 
 ---
 
-![Flutter](https://img.shields.io/badge/Framework-Flutter-blue.svg)
-![Dart](https://img.shields.io/badge/Language-Dart-0175C2.svg)
-![Firebase](https://img.shields.io/badge/Backend-Firebase-orange.svg)
-![Groq AI](https://img.shields.io/badge/AI-Groq_API-purple.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+## Feature Overview
+
+| Feature | What it does |
+|---|---|
+| **YouTube Notes** | Paste any YouTube URL and receive AI-structured notes: summary, key points, section breakdowns, key terms, and takeaways |
+| **AI Test Generator** | Specify a topic, grade level, difficulty, and question format — get a complete test paper with an answer key |
+| **Study Planner** | Input a goal, a list of topics, and a deadline — the AI builds a day-by-day schedule that prioritises foundations before revision |
+| **Notes Manager** | Store, search, edit, and share text, photo, and PDF notes from a single interface backed by Cloudinary |
+| **Progress Analytics** | Daily and weekly study hours, task completion rates, notes breakdown by type, and a monthly calendar heatmap |
+| **Study Streak** | Study at least one hour to extend your streak. Miss a day and it resets. No exceptions, no shortcuts |
+| **Leaderboard** | Create a private group with an invite code and compete on a weighted score across tasks, notes, streak, and consistency |
+| **Live Study Timer** | The dashboard runs a persistent timer that batch-saves to Firestore every minute — no lost hours even if you close the app |
 
 ---
 
-#  Project Overview
+## System Architecture
 
-Acadify came from a simple thought – students already spend hours on YouTube, loose paper notes, and random to‑do lists. What if we could put an intelligent assistant right in their pocket, one that turns lectures into notes, builds custom tests, and actually knows what they need to study next?
+```
+User Action
+    |
+    v
+Flutter UI (Material 3, Provider state)
+    |
+    +---> Firebase Auth        (sign-up, login, session)
+    |
+    +---> Groq AI API          (structured prompt -> JSON response)
+    |         |
+    |         +-- llama-3.1-8b-instant  (notes, test generation)
+    |         +-- gemma2-9b-it          (study planning)
+    |
+    +---> Cloud Firestore       (real-time sync across devices)
+    |         |
+    |         +-- users/{uid}/tasks
+    |         +-- users/{uid}/notes
+    |         +-- users/{uid}/streakHistory
+    |         +-- users/{uid}/studyLogs
+    |         +-- leaderboardGroups
+    |
+    +---> Cloudinary            (image and PDF uploads)
+    |
+    v
+Result displayed + optionally persisted
+```
 
-That’s what we built. Acadify is a cross‑platform Flutter app with Firebase on the back and Groq AI models on the front of the intelligence layer. It can:
+**Timer persistence strategy:** Study seconds accumulate in local memory and flush to Firestore every 60 seconds, preventing write overload while guaranteeing data safety.
 
-- Take any YouTube link and give you a full set of structured notes (summary, key points, detailed sections, terms – all organised).
-- Generate a complete test paper on whatever topic you pick, with the difficulty and question style you want.
-- Create a day‑by‑day study schedule from just a goal, a list of topics, and a deadline.
-- Store all your notes – typed, photographed, or PDF – in one place that you can search and share.
-- Track how much you actually studied each day, show you a streak to keep you going, and give you charts and stats that make progress visible.
-- Let you and your friends create private groups and compete on a leaderboard (because a little healthy competition never hurts).
-
-Everything syncs in real time across Android, iOS, and the web. We built this as our final year B.Tech project, but we hope it can genuinely help any student who picks it up.
-
----
-
-#  Features
-
-✔ **YouTube Notes** – Paste a link, get AI‑generated notes including summary, key points, detailed breakdowns, key terms, and takeaways.  
-✔ **AI Test Generator** – Choose topic, class, difficulty, and question type; get a full test paper with an answer key.  
-✔ **Study Planner** – Add tasks manually or let the AI design a full daily schedule that thinks about foundation first and revision later.  
-✔ **Notes Manager** – Keep text, photo, and PDF notes; search across all of them, edit, share, or upload new ones to Cloudinary.  
-✔ **Progress Analytics** – Clean charts showing daily and weekly study hours, task completion, notes breakdown, and a monthly calendar heatmap.  
-✔ **Study Streak** – Study at least one hour a day and your streak grows automatically. Miss a day and it resets – simple but motivating.  
-✔ **Leaderboard** – Create a group, share an invite code, and compete on overall score, streak length, notes count, or tasks done.  
-✔ **Live Study Timer** – The dashboard runs a timer while you study; it auto‑saves in the background so your hours are never lost.
-
----
-
-#  Table of Contents
-
-- [Problem Statement](#problem-statement)
-- [Why This Project](#why-this-project)
-- [System Flow](#system-flow)
-- [Directory Structure](#directory-structure)
-- [Screenshots](#screenshots)
-- [Technical Details](#technical-details)
-- [Developer](#developer)
-- [License](#license)
+**AI robustness:** All Groq responses are passed through a pipeline that strips markdown fences, repairs malformed JSON, and falls back gracefully — users never see raw model output.
 
 ---
 
-#  Problem Statement
+## Tech Stack
 
-We noticed that most students – including us – face the same set of daily struggles:
-
-- No quick way to turn a YouTube video into study notes you can actually revise.
-- No personalised self‑testing tool that matches exactly what you’re studying.
-- No automatic planner that breaks a huge syllabus into manageable chunks.
-- Notes everywhere: some in photos, some in random apps, some lost forever.
-- No way to see at a glance whether you’re falling behind or actually improving.
-- Studying alone can feel like an isolated grind without a sense of how you compare to peers.
-
-Acadify was built to solve exactly these problems. One app that feels like it was designed for how students actually learn, not how a generic planner thinks they should.
-
----
-
-#  Why This Project
-
-There are plenty of study apps out there, but most do one thing well and ignore the rest. We wanted to connect all the dots in a way that felt natural:
-
-• **AI that understands education, not just chat**  
-We fine-tuned our prompts so the Groq models return actual study content – not generic summaries. The test generator balances difficulty, the planner thinks about prior knowledge before moving forward, and the YouTube extractor gives you revision-ready notes, not a transcript.
-
-• **One codebase, truly everywhere**  
-Flutter let us ship on Android, iOS, and web without duplicating work. Whether you’re on your phone or laptop, the experience is the same.
-
-• **Real-time everything**  
-Firebase Firestore means your notes, tasks, and study hours update instantly across all your devices. You’ll never lose data even if you close the app mid-session.
-
-• **Gamification that actually matters**  
-Streaks and leaderboards aren’t just for show – they reflect your real work. The streak only counts when you’ve genuinely studied more than an hour, and the leaderboard uses a weighted score from tasks, notes, and consistency.
-
-• **Clean, distraction-free design**  
-We stuck with Material 3 and made sure both light and dark themes are comfortable to read for long study sessions.
-
----
-
-#  System Flow
-
-Here’s how the app works under the hood, from user tap to result:
-
-1. **Authentication** – Sign up / log in via Firebase Auth.
-2. **Dashboard** – The main hub shows your profile, daily goal, live timer, and a grid of feature cards.
-3. **Feature selection** – Tap on any module (YT Notes, AI Test Generator, etc.).
-4. **User input** – Provide a YouTube URL, a topic name, a goal statement, or manual task details.
-5. **AI call** – The Flutter app sends a structured prompt to Groq’s API. We ask for JSON with specific fields, and we have a robust parser that fixes common AI output errors.
-6. **Display & save** – Results are shown beautifully on screen, and optionally saved to Firestore (notes, tasks, test history).
-7. **Real‑time sync** – Any change is immediately pushed to Cloud Firestore and visible on all devices.
-
-For the timer, we track seconds locally and batch‑save to Firestore every minute to avoid overwhelming writes while still keeping data safe.
-
-## System Flow
-
-<p align="center">
-  <img src="assets/flowchart.png" width="800">
-</p>
+| Layer | Technology |
+|---|---|
+| Framework | Flutter (Dart), Material 3 |
+| State Management | Provider |
+| Authentication | Firebase Auth (Email / Password) |
+| Database | Cloud Firestore |
+| File Storage | Firebase Storage + Cloudinary |
+| AI Models | Groq API — `llama-3.1-8b-instant`, `gemma2-9b-it` |
+| Charts | fl_chart |
+| File Handling | file_picker |
+| Sharing | share_plus |
+| Notifications | Browser Notifications API (dart:js_interop) |
+| Platforms | Android, iOS, Web |
 
 ---
 
 ## Directory Structure
 
-<p align="center">
-  <img src="assets/Directory.png" width="900">
-</p>
+```
+acadify/
+├── android/                        # Android platform config
+├── ios/                            # iOS platform config
+├── web/                            # Web platform config
+├── assets/                         # Images, icons, screenshots
+├── lib/
+│   ├── main.dart                   # App entry point
+│   ├── firebase_options.dart       # Firebase web config
+│   ├── models/                     # Data models (Task, Note, User, etc.)
+│   ├── providers/                  # Provider state classes
+│   ├── Services/
+│   │   └── ai_service.dart         # Groq API calls + JSON parsing
+│   └── pages/
+│       ├── splash_page.dart
+│       ├── login_page.dart
+│       ├── signup_page.dart
+│       ├── dashboard_page.dart
+│       ├── yt_notes_page.dart
+│       ├── test_generator_page.dart
+│       ├── study_planner_page.dart
+│       ├── notes_manager_page.dart
+│       ├── progress_analytics_page.dart
+│       ├── streak_page.dart
+│       └── leaderboard_page.dart
+├── pubspec.yaml
+└── README.md
+```
 
-#  How to Run Locally
+---
 
-Follow these steps to get Acadify running on your machine.
+## Firestore Schema
+
+```
+users (collection)
+└── {uid} (document)
+    ├── displayName, email, photoUrl
+    ├── dailyGoalHours, currentStreak, longestStreak
+    ├── tasks (subcollection)
+    │   └── {taskId} — title, subject, dueDate, isCompleted, priority
+    ├── notes (subcollection)
+    │   └── {noteId} — title, content, type (text|image|pdf), cloudinaryUrl, createdAt
+    ├── streakHistory (subcollection)
+    │   └── {date} — hoursStudied, streakCount
+    └── studyLogs (subcollection)
+        └── {date} — totalSeconds, sessions[]
+
+leaderboardGroups (collection)
+└── {groupId} (document)
+    ├── name, inviteCode, createdBy
+    └── members[] — uid, displayName, score, streak, notesCount, tasksCompleted
+```
+
+---
+
+## Local Setup
 
 ### Prerequisites
-- Flutter SDK (version 3.38 or later)
-- A Firebase project with Authentication (Email/Password) and Firestore enabled
-- A Groq API key (free tier is available)
-- (Optional) Cloudinary account for image/PDF uploads
 
-### Step 1 – Clone the repository
+- Flutter SDK 3.38 or later (`flutter --version`)
+- A Firebase project with **Email/Password Auth** and **Firestore** enabled
+- A Groq API key — free tier available at [console.groq.com](https://console.groq.com)
+- (Optional) A Cloudinary account for photo and PDF uploads
+
+---
+
+### Step 1 — Clone the repository
+
 ```bash
 git clone https://github.com/codewithharsh08/Acadify
-```
-### Step 2 - Go to project directory
-```bash
 cd acadify
 ```
-### Step 3 – Install dependencies
+
+### Step 2 — Install Flutter dependencies
+
 ```bash
 flutter pub get
 ```
-### Step 4 – Firebase setup
-```bash
-Android: Place your google-services.json file in the android/app/ folder.
 
-iOS: Place your GoogleService-Info.plist file in the ios/Runner/ folder.
+### Step 3 — Connect Firebase
 
-Web: Open lib/firebase_options.dart and update the values to match your Firebase project’s web configuration.
+**Android**
+
+Place your `google-services.json` inside `android/app/`:
+
 ```
-### Step 5 – Configure Groq API key
-```bash
-Open: lib/Services/ai_service.dart
-Replace: static const _groqKey = 'your-existing-key';
-with your actual Groq API key.
+android/
+└── app/
+    └── google-services.json   <-- put it here
 ```
-### Step 6 – (Optional) Cloudinary configuration
-```bash
-Open: lib/pages/notes_manager_page.dart
-Update: static const String _cloudName = 'your-cloud-name';
-static const String _uploadPreset = 'your-upload-preset';
-with your own Cloudinary credentials if you want to allow photo/PDF uploads.
+
+**iOS**
+
+Place your `GoogleService-Info.plist` inside `ios/Runner/`:
+
 ```
-### Step 7 – Run the app
+ios/
+└── Runner/
+    └── GoogleService-Info.plist   <-- put it here
+```
+
+**Web**
+
+Open `lib/firebase_options.dart` and replace the placeholder values with your Firebase project's web config:
+
+```dart
+static const FirebaseOptions web = FirebaseOptions(
+  apiKey: 'YOUR_API_KEY',
+  appId: 'YOUR_APP_ID',
+  messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
+  projectId: 'YOUR_PROJECT_ID',
+  storageBucket: 'YOUR_STORAGE_BUCKET',
+);
+```
+
+### Step 4 — Add your Groq API key
+
+Open `lib/Services/ai_service.dart` and replace the placeholder:
+
+```dart
+static const _groqKey = 'YOUR_GROQ_API_KEY';
+```
+
+### Step 5 — (Optional) Configure Cloudinary
+
+Open `lib/pages/notes_manager_page.dart` and update:
+
+```dart
+static const String _cloudName    = 'YOUR_CLOUD_NAME';
+static const String _uploadPreset = 'YOUR_UPLOAD_PRESET';
+```
+
+Without this step, text notes will still work — only image and PDF upload will be unavailable.
+
+### Step 6 — Run the app
+
 ```bash
+# Mobile (with a connected device or emulator)
 flutter run
-```
-### Step 8 – Access via browser (web)
-```bash
-If running on web: flutter build web
+
+# Web (local development)
+flutter run -d chrome
+
+# Web (production build + Firebase Hosting)
+flutter build web
 firebase deploy --only hosting
-Then open the provided hosting URL.
 ```
+
+---
+
+## AI Prompt Design
+
+Acadify does not use generic chat prompts. Each module sends a structured instruction set to Groq that specifies exact output format, field names, difficulty calibration, and educational sequencing.
+
+**YouTube Notes prompt structure:**
+```
+Extract educational content from the following transcript.
+Return a JSON object with exactly these fields:
+{
+  "summary": "...",
+  "keyPoints": ["...", "..."],
+  "sections": [{ "heading": "...", "content": "..." }],
+  "keyTerms": [{ "term": "...", "definition": "..." }],
+  "takeaways": ["...", "..."]
+}
+Return only valid JSON. No markdown. No explanation.
+```
+
+**Test Generator:** Prompts balance difficulty distribution across Easy / Medium / Hard tiers and enforce a consistent answer key format.
+
+**Study Planner:** Prompts instruct the model to schedule foundational topics before advanced ones, build in revision days near the deadline, and distribute load evenly across available days.
+
+All responses are sanitised through a repair pipeline before reaching the UI.
 
 ---
 
 ## Screenshots
 
-Below are some screenshots of the app in action.
-
-## Splash Screen
-![Splash](assets/splash.png)
-
-## Login
-![Login](assets/login.png)
-
-## Create Account
-![Signup](assets/signup.png)
-
-## Dashboard
-![Dashboard](assets/dashboard.png)
-
-## YouTube Notes
-![YT Notes](assets/yt_notes.png)
-
-## AI Test Generator
-![Test Generator](assets/test_generator.png)
-
-## Study Planner
-![Study Planner](assets/study_planner.png)
-
-## Notes Manager
-![Notes Manager](assets/notes_manager.png)
-
-## Study Streak
-![Streak](assets/streak1.png)
-![Streak](assets/streak2.png)
-
-## Leaderboard
-![Leaderboard](assets/leaderboard.png)
+| Screen | Preview |
+|---|---|
+| Splash | ![Splash](assets/splash.png) |
+| Login | ![Login](assets/login.png) |
+| Sign Up | ![Signup](assets/signup.png) |
+| Dashboard | ![Dashboard](assets/dashboard.png) |
+| YouTube Notes | ![YT Notes](assets/yt_notes.png) |
+| AI Test Generator | ![Test Generator](assets/test_generator.png) |
+| Study Planner | ![Study Planner](assets/study_planner.png) |
+| Notes Manager | ![Notes Manager](assets/notes_manager.png) |
+| Study Streak | ![Streak](assets/streak1.png) |
+| Leaderboard | ![Leaderboard](assets/leaderboard.png) |
 
 ---
 
-## Demo Link
+## Leaderboard Scoring Formula
 
-https://acadify-f6372.web.app
+```
+score = (tasks_completed * 10)
+      + (notes_count * 5)
+      + (current_streak * 15)
+      + (weekly_hours * 3)
+```
 
----
-
-## Technical Details
-
-| Component | Technology |
-|----------|-----------|
-| Framework | Flutter (Dart) with Material 3 |
-| State Management | Provider |
-| Backend | Firebase Auth, Firestore, Storage |
-| AI API | Groq (llama-3.1-8b-instant, gemma2-9b-it) |
-| Charts | fl_chart |
-| Media Uploads | Cloudinary |
-| File Picking | file_picker |
-| Sharing | share_plus |
-| Notifications | Browser API (dart:js_interop) |
+The weighted formula ensures that consistent daily effort outweighs one-day cramming sessions, which aligns with how long-term retention actually works.
 
 ---
 
-## Data in Firestore
+## Roadmap
 
-- **users** – profile, streak tracking, daily goals  
-- **users/{uid}/tasks** – planner tasks  
-- **users/{uid}/notes** – notes (text, image, PDF)  
-- **users/{uid}/streakHistory** – daily streak records  
-- **users/{uid}/studyLogs** – study hours data  
-- **leaderboardGroups** – group metadata  
+- [ ] OCR support for handwritten notes (photo-to-text)
+- [ ] Spaced repetition system for flashcards generated from notes
+- [ ] Push notifications for scheduled study sessions
+- [ ] Export test papers and notes to PDF
+- [ ] Group collaborative notes with real-time co-editing
+- [ ] Subject-specific AI personas (e.g., stricter grading for math)
 
-**AI Robustness**
+---
 
-We clean AI output using markdown stripping, JSON repair, and fallback parsing so users never see raw errors.
+## Contributing
+
+Contributions, issues, and feature requests are welcome.
+
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feature/your-feature-name`
+3. Commit your changes: `git commit -m 'Add: your feature description'`
+4. Push to the branch: `git push origin feature/your-feature-name`
+5. Open a Pull Request
+
+Please follow the existing code style and add comments for any new AI prompt logic.
 
 ---
 
 ## Developer
 
-**Harsh**
+**Harsh** — B.Tech Final Year Project, 2026
 
-LinkedIn:  
-https://www.linkedin.com/in/codexharsh/
-
-GitHub:  
-https://www.linkedin.com/in/codexharshh/
-
-Email:  
-harsh983720@gmail.com
+| | |
+|---|---|
+| LinkedIn | [linkedin.com/in/codexharsh](https://www.linkedin.com/in/codexharsh/) |
+| GitHub | [github.com/codewithharsh08](https://github.com/codewithharsh08) |
+| Email | harsh983720@gmail.com |
 
 ---
 
 ## License
-
-Licensed under the **Apache License 2.0**
 
 ```
 Copyright 2026 Harsh
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+    http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND.
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 ```
 
-<p align="center"> Made by Harsh </p> 
+---
+
+<div align="center">
+
+Built with intent. Designed for students. Shipped with Flutter.
+
+**[Live Demo](https://acadify-f6372.web.app)**
+
+</div>
